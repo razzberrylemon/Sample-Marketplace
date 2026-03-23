@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+    <div id="menuBar">
+        <a href="/continue_shopping" class = "bigButton homeButton">Home</a>
+        <a href="/purchase_logout" class = "bigButton logoutButton">Logout</a>
+    </div>
+
+    <div class="center">
+        
+
+        <table class="spacing" style="width: 300px;">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="quantity : ${order.quantities}">
+                    <td th:text="${quantity.product.name}"></td>
+                    <td th:text="${quantity.quantity}"></td>
+                    <td class="price">€<span th:text="${quantity.product.price}"></span></td>            
+                </tr>
+            </tbody>
+        </table>
+        <h2>Order Status: <span th:text="${order.status}"></span></h2>
+        <h1>Total: €<span th:text="${order.totalCost}"></span></h1>
+    
+        
+    </div>
+
+
+</body>
+</html>

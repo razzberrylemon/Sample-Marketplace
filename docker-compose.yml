@@ -1,0 +1,19 @@
+version: '3.3'
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'marketdb'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'Mu4ph7&L1nk2107'
+      MYSQL_ROOT_PASSWORD: 'Mu4ph7&L1nk2107'
+    ports:
+      - '3307:3306'
+    volumes:
+      - my-db:/var/lib/mysql
+  # frontend:
+
+# Names our volume
+volumes:
+  my-db:

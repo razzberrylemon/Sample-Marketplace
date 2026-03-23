@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin View</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div id="menuBar">
+            <a href="/display_orders" class = "bigButton ordersButton">Show All Orders</a>
+            <a href="/admin_logout" class = "bigButton logoutButton">Logout</a>
+        </div>
+
+        <table class="spacing">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Visible</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="product : ${allProducts}">
+                    <td th:text="${product.name}"></td>
+                    <td class="price">€<span th:text="${product.price}"></span></td>
+                    <td th:text="${product.description}" class="description"></td>
+                    <td th:text="${product.visible}" class="visibility"></td>
+                    <td><a th:href="@{/edit_product(product_id=${product.id})}" class="littleButton">Edit</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+
+        <p class="centerText">Enter product details and click submit to add a product to the shop.</p>
+
+        <div class="formContainer">
+            <form id="createForm" action="/product_creation" method="GET">
+                <label for="name">Name: </label>
+                <input type="text" class="name" name="name">
+                <br>
+    
+                <label for="price">Price: </label>
+                <input type="text" class="price" name="price">
+                <br>
+    
+                <label for="description">Description:</label>
+                <br>
+                <textarea class="description" name="description" placeholder="Enter description"></textarea>
+                <br>
+    
+                <label for="visibile">Visible to Customer:</label>
+                <input type="hidden" name="visible" value="false">
+                <input type="checkbox" id="visible" name="visible" value="true" checked>
+                <br>
+    
+                <input type="submit" class="bigButton saveButton" value="Save!">
+            </form>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>

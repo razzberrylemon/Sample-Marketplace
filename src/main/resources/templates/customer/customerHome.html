@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product List</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div id="menuBar">
+            <a href="/view_customer_orders" class = "bigButton ordersButton">View Orders</a>
+            <a href="/cart" class = "bigButton cartButton">View Cart</a>
+            <a href="/customer_logout" class = "bigButton logoutButton">Logout</a>
+        </div>
+        
+        <div class="tableContainer">
+            <table>
+                <tbody>
+                    <tr th:each="product : ${visibleProducts}">
+                        <td><a th:href="@{/product_details(product_id=${product.id})}"  th:text="${product.name}"></a></td>
+                        <td class="price">€<span th:text="${product.price}"></span></td>
+                        <td th:text="${product.description}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </body>
+</html>

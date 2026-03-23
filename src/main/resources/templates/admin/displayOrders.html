@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+    <div id="menuBar">
+        <a href="/adminHome" class = "bigButton homeButton">Home</a>
+        <a href="/admin_logout" class = "bigButton logoutButton">Logout</a>
+    </div>
+
+    <table style="width: 700px;">
+        <thead>
+            <tr>
+                <th>Customer ID</th>
+                <th>Order Status</th>
+                <th>Product : Quantity</th>
+                <th>Total Cost</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="order : ${orders}">
+                <td th:text="${order.customer.id}"></td>
+                <td th:text="${order.status}"></td>
+                <td>
+                    <p  th:each="quantity : ${order.quantities}">
+                        <span th:text="${quantity.product.name}"></span> : <span th:text="${quantity.quantity}"></span>
+                    </p>
+                </td>
+                <td>Total: €<span th:text="${order.totalCost}"></span></td>
+                <td><a th:href="@{/edit_order(order_id=${order.id})}" class="littleButton">Edit</a></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

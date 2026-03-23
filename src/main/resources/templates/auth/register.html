@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign Up</title>
+        <link rel="stylesheet" href="main.css">
+
+    </head>
+    <body>
+        <h1 id="regTitle" class="title centerText">Customer Registration</h1>
+
+        <h2 th:text="${error_message}" class="errorMessage centerText"></h2>
+             
+        <div class="formContainer">
+            <form action="/register" method="POST">
+                <div class="radioButtons formInput">
+                    <input type="radio" id="customer" name="signtype" value="customer" onchange="regDisp()" checked>
+                    <label for="customer">Customer</label>
+        
+                    <input type="radio" id="admin" name="signtype" value="admin" onchange="regDisp()">
+                    <label for="admin">Admin</label><br>
+                </div>
+    
+                <label for="username">Username: </label>
+                <input type="text" id="username" name="username" class="formInput"><br>
+    
+                <label for="password">Password: </label>
+                <input type="text" id="password" name="password" class="formInput"><br>
+
+                <input type="submit" class="bigButton authButton" value="Register">
+            </form>
+        </div>
+
+        <div class="backContainer">
+            <a href="/index" class = "bigButton backButton">Back</a>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,253 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 1.25px;
+}
+
+.bigButton {
+    text-decoration: none;
+    border-radius: 100px;
+    border: solid;
+    text-align: center;
+    color: black;
+    padding: 10px 25px;
+    font-size: 20px;
+}
+
+.littleButton {
+    text-decoration: none;
+    border-radius: 100px;
+    border: solid;
+    text-align: center;
+    color: black;
+    padding: 5px 15px;
+    font-size: 16px;  
+}
+
+#menuBar {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+
+.backContainer {
+    position: absolute;
+    left: 10px;
+    top: 20px;
+}
+
+.errorMessage {
+    color: red;
+}
+
+.spacing {
+    margin-bottom: 40px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.centerText {
+    text-align: center;
+}
+
+a {
+    color: #2C30A7;
+}
+
+select {
+    width: 125px;
+    height: 30px;
+    font-size: 17px
+}
+
+/* ------ TABLES ------ */
+
+table {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width: 600px;
+    border-collapse: collapse;
+}
+
+td {
+    height: 50px;
+}
+
+tr {
+    border-bottom: 1px solid black;
+}
+
+td.price, td.quantity, td.visibliity { 
+    width: 60px;   
+}
+
+td.description {
+    width: 200px;
+}
+
+/* ------ FORMS ------ */
+
+form {
+    font-size: 20px;
+}
+
+input[type="text"], textarea {
+    padding: 5px;
+    font-size: 17px;
+}
+
+input, textarea {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 300px;
+    height: 100px;
+}
+
+.formContainer {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.title {
+    margin-top: 50px;
+}
+
+#descriptionContainer {
+    display: flex;
+    align-items: center;
+}
+
+/* ------ INDEX.HTML ------ */
+
+#buttonContainer {
+    display: flex;
+    /* border: 1px solid; */
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    width: 400px;
+}
+
+.welcomeButton {
+    background-color: #FFD166;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100px;
+}
+
+.welcomeButton:hover {
+    background-color: #FFDA84;
+}
+
+.welcomeMessage {
+    margin: 30px;
+}
+
+#welcomeContainer {
+    padding-top: 50px;
+}
+
+/* ------ LOGIN.HTML AND REGISTER.HTML ----- */
+
+.authButton {
+    width: 150px;
+    background-color: #FFD166;
+    margin-top: 20px;
+}
+
+.authButton:hover {
+    background-color: #FFDA84;
+}
+
+/* ------ PRODUCT DETAILS.HTML ------ */
+
+.detailsContainer {
+    margin-top: 100px;
+}
+
+/* ------ ORDER DETAILS.HTML ------ */
+
+ul {
+    list-style-type: none;
+}
+
+
+/* BUTTONS */
+
+/* ------ BACK BUTTON ------ */
+
+.backButton {
+    color: #E3EBFF;
+    border-color: black;
+    background-color: #26547C;
+}
+
+.backButton:hover {
+    background-color: #2e618e;
+}
+
+/* ------ SAVE BUTTON ------ */
+
+.saveButton {
+    background-color: #77BA99;
+}
+
+.saveButton:hover {
+    background-color: #82C5A3;
+}
+
+/* ------ LOGOUT BUTTON ------ */
+
+.logoutButton {
+    background-color: #F9A764;
+}
+
+.logoutButton:hover {
+    background-color: #f6b177;
+}
+
+/* ------ VIEW ORDERS BUTTON ------ */
+.ordersButton {
+    background-color: #D17B8F;
+}
+
+.ordersButton:hover {
+    background-color: #d68699;
+}
+
+/* ------ CART BUTTON ------ */
+.cartButton {
+    background-color: #6CA0B3;
+}
+
+.cartButton:hover {
+    background-color: #74adc2;
+}
+
+/* ------ HOME BUTTON ------ */
+.homeButton {
+    background-color: #C094C7;
+}
+
+.homeButton:hover {
+    background-color: #cc9ad3;
+}
+
+
+
+
+

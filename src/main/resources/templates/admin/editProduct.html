@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+    <div id="menuBar">
+        <a href="/adminHome" class="bigButton homeButton">Home</a>
+        <a href="/admin_logout" class="bigButton logoutButton">Logout</a>
+    </div>
+
+    <h1 th:text="${editingProduct.name}" class="centerText" style="margin-top: 100px;"></h1>
+
+    <div class="formContainer">
+        <form action="#" th:action="@{/save_product(product_id=${editingProduct.id})}" th:object="${editingProduct}" method="POST">
+            <label for="price">Price: </label>
+            <input type="text" name="price" class="price" th:value="${editingProduct.price}">
+            <br>
+            
+            <label for="description">Description: </label>
+            <br>
+            <textarea name="description" id="description" th:text="${editingProduct.description}"></textarea>
+            <br>
+    
+            <label for="visibile">Visible to Customer:</label>
+            <input type="hidden" name="visible" value="false">
+            <input type="checkbox" id="visible" name="visible" value="true" checked>
+            <br>
+    
+            <input type="submit" class="bigButton saveButton" value="Save!">
+    
+        </form>
+    </div>
+    
+</body>
+</html>

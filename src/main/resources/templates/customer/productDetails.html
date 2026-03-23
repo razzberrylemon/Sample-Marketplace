@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+    <div id="menuBar">
+        <a href="/customerHome" class = "bigButton homeButton">Home</a>
+        <a href="/customer_logout" class = "bigButton logoutButton">Logout</a>
+    </div>
+
+    <div class="detailsContainer center">
+        <h1 th:text="${displayProduct.name}" class="spacing"></h1>
+        <p th:text="${displayProduct.description}" class="spacing"></p>
+        <h2 class="spacing">€<span th:text="${displayProduct.price}"></span></h2>
+        <br>
+        <a th:href="@{/add_to_cart(product_id=${displayProduct.id})}" class="bigButton cartButton">Add to Cart!</a>
+    </div>
+</body>
+</html>
